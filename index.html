@@ -1,0 +1,54 @@
+<!DOCTYPE html> 
+ <html>
+   <head>
+	 
+	 <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+      
+      <script type="text/javascript" language="javascript">
+ 
+        function videopanel(id) { 
+            str = '<iframe width="100%" height="350" src="http://www.youtube.com/embed/' + id + '" frameborder="0" allowfullscreen></iframe>';
+            return str;
+        }
+ 
+		/// 取代原程式的jQuery("#id").bind("click touch" ...之作用 ///
+		function videochange(id) {
+			document.getElementById("player").innerHTML = videopanel(id);		
+		}
+
+      </script>
+ 
+   </head>
+   <body>
+ 
+      <div data-role="page" id="page">
+ 
+			<div data-role="content" style="margin:0px 0px 0px 0px; padding:10px 2% 400px 2%; width:96%; height:900px; background-color:#000000;">
+			
+			<div id="player">
+			<iframe width="100%" height="350" src="http://www.youtube.com/embed/ypKWTrzcCZE" frameborder="0" allowfullscreen></iframe>
+			</div>
+
+            <br /><br />
+ <div class="collection">
+    <a class="collection-item" href='javascript:videochange("ypKWTrzcCZE")'>天籟神曲：張士超你到底把我家鑰匙放在哪裡了（楊宗緯）</a>
+                  <a class="collection-item" href='javascript:videochange("9KuwVAq8-lY")'>天籟神曲：我的滑板鞋（華晨宇）</a>
+				  <a class="collection-item" href='javascript:videochange("8FjnCYwbvhI")'>天籟神曲：五環之歌（張信哲）</a>
+                  <a class="collection-item" href='javascript:videochange("xPEHBwE_j9s")'>天籟神曲：愛情買賣（費玉清）</a>
+
+      </div>
+           
+ 
+         </div>
+ 
+      </div>
+ 
+   </body>
+   </html>
